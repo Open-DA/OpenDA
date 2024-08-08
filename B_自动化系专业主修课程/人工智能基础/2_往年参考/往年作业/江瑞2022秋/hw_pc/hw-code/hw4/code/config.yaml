@@ -1,0 +1,16 @@
+# MLP模型配置
+optimizer:
+    type: SGD
+    lr: 0.01
+    momentum: 0.001
+data:
+    split: 0.8
+epoch: 500
+train_batch_size: 32
+valid_batch_size: 32
+test_batch_size: 32
+early_stop: 5
+seed: 42
+cuda: True
+device: cuda
+save_dir: ./sf_models
