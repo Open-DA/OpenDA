@@ -1,0 +1,231 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>清华大学云盘</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="File Collaboration Team Organization" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<link rel="shortcut icon" href="/media/img/favicon.ico" />
+
+<link rel="stylesheet" type="text/css" href="/media/assets/css/bootstrap.min.b00faad199b5.css"/>
+
+<link rel="stylesheet" type="text/css" href="/media/css/seahub.css?t=1398068110" />
+<link rel="stylesheet" type="text/css" href="/media/css/sf_font3/iconfont.css" />
+
+ 
+
+</head>
+
+<body>
+    <div id="wrapper" class="en d-flex fd-col h100">
+        
+        
+        
+
+        <div id="header" class="d-flex">
+            <a href="/" id="logo">
+                <img src="/media/custom/mylogo.png" title="清华大学云盘" alt="logo" width="" height="32" />
+            </a>
+            <span class="sf2-icon-menu side-nav-toggle hidden-md-up hide" title="Side Nav Menu" id="js-toggle-side-nav" aria-label="Side Nav Menu"></span>
+
+            
+            
+            
+            <div id="lang">
+                <a href="#" id="lang-context" data-lang="en">English <span class="icon-caret-down"></span></a>
+                <div id="lang-context-selector" class="sf-popover hide">
+                    <ul class="sf-popover-con">
+                        
+                        <li><a href="/i18n/?lang=ca">Català</a></li>
+                        
+                        <li><a href="/i18n/?lang=cs">Čeština</a></li>
+                        
+                        <li><a href="/i18n/?lang=de">Deutsch</a></li>
+                        
+                        <li><a href="/i18n/?lang=en">English</a></li>
+                        
+                        <li><a href="/i18n/?lang=es">Español</a></li>
+                        
+                        <li><a href="/i18n/?lang=es-ar">Español de Argentina</a></li>
+                        
+                        <li><a href="/i18n/?lang=es-mx">Español de México</a></li>
+                        
+                        <li><a href="/i18n/?lang=fr">Français</a></li>
+                        
+                        <li><a href="/i18n/?lang=it">Italiano</a></li>
+                        
+                        <li><a href="/i18n/?lang=is">Íslenska</a></li>
+                        
+                        <li><a href="/i18n/?lang=lv">Latvian</a></li>
+                        
+                        <li><a href="/i18n/?lang=hu">Magyar</a></li>
+                        
+                        <li><a href="/i18n/?lang=nl">Nederlands</a></li>
+                        
+                        <li><a href="/i18n/?lang=pl">Polski</a></li>
+                        
+                        <li><a href="/i18n/?lang=pt-br">Portuguese, Brazil</a></li>
+                        
+                        <li><a href="/i18n/?lang=ru">Русский</a></li>
+                        
+                        <li><a href="/i18n/?lang=sl">Slovenian</a></li>
+                        
+                        <li><a href="/i18n/?lang=fi">Suomi</a></li>
+                        
+                        <li><a href="/i18n/?lang=sv">Svenska</a></li>
+                        
+                        <li><a href="/i18n/?lang=vi">Tiếng Việt</a></li>
+                        
+                        <li><a href="/i18n/?lang=tr">Türkçe</a></li>
+                        
+                        <li><a href="/i18n/?lang=uk">українська мова</a></li>
+                        
+                        <li><a href="/i18n/?lang=he">עברית</a></li>
+                        
+                        <li><a href="/i18n/?lang=ar">العربية</a></li>
+                        
+                        <li><a href="/i18n/?lang=el">ελληνικά</a></li>
+                        
+                        <li><a href="/i18n/?lang=th">ไทย</a></li>
+                        
+                        <li><a href="/i18n/?lang=ko">한국어</a></li>
+                        
+                        <li><a href="/i18n/?lang=ja">日本語</a></li>
+                        
+                        <li><a href="/i18n/?lang=zh-cn">简体中文</a></li>
+                        
+                        <li><a href="/i18n/?lang=zh-tw">繁體中文</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            
+        </div>
+
+        <div id="main" class="container-fluid w100 flex-auto ov-auto">
+            
+<div class="text-panel">
+    <p class="error">File does not exist</p>
+</div>
+
+        </div>
+
+        
+
+        <div id="confirm-popup" class="hide">
+            <div id="confirm-con"></div>
+            <button id="confirm-yes">Yes</button>
+            <button class="simplemodal-close">No</button>
+        </div>
+</div><!-- wrapper -->
+<script type="text/javascript">
+var SEAFILE_GLOBAL = {
+    csrfCookieName: 'sfcsrftoken'
+};
+var app = {
+    ui : {
+        currentDropdown: false,
+        currentHighlightedItem: false,
+        freezeItemHightlight: false
+    }
+}
+</script>
+<script type="text/javascript" src="/media/assets/scripts/lib/jquery.min.dc5e7f18c8d3.js" id="jquery"></script>
+<script type="text/javascript" src="/media/assets/scripts/lib/jquery.simplemodal.55150926fcd1.js"></script>
+<script type="text/javascript" src="/media/js/jq.min.js"></script>
+<script type="text/javascript" src="/media/js/base.js?t=1536127546642"></script>
+<script type="text/javascript">
+function prepareAjaxErrorMsg(xhr) {
+    var error_msg;
+    if (xhr.responseText) {
+        var parsed_resp = JSON.parse(xhr.responseText);
+        // use `HTMLescape` for msgs which contain variable like 'path'
+        error_msg = HTMLescape(parsed_resp.error ||
+                parsed_resp.error_msg || parsed_resp.detail);
+    } else {
+        error_msg = gettext("Failed. Please check the network.");
+    }
+    return error_msg;
+}
+function ajaxErrorHandler(xhr, textStatus, errorThrown) {
+    var error_msg = prepareAjaxErrorMsg(xhr);
+    feedback(error_msg, 'error');
+}
+ 
+(function() {
+    var lang_context = $('#lang-context'),
+        lang_selector = $('#lang-context-selector');
+
+    // for pages without '#lang', such as 'help' pages
+    if ($('#lang').length == 0) {
+        return;
+    }
+
+    lang_context.parent().css({'position':'relative'});
+
+    if ($('#header').is(':visible')) { // for login page
+        lang_selector.css({
+            'top': lang_context.position().top + lang_context.height() + 5,
+            'right': 0
+        });
+    }
+
+    var setLangSelectorMaxHeight = function() {
+        if ($('#header').is(':visible')) { // for login page
+            $('.sf-popover-con', lang_selector).css({
+                'max-height': $(window).height() - lang_selector.offset().top - 12
+            });
+        }
+    };
+    $(window).on('resize', function() {
+        if (lang_selector.is(':visible')) {
+            setLangSelectorMaxHeight();
+        }
+    });
+
+    lang_context.on('click', function() {
+        lang_selector.toggleClass('hide');
+        if (lang_selector.is(':visible')) {
+            setLangSelectorMaxHeight();
+        }
+        return false;
+    });
+
+    $(document).on('click', function(e) {
+        var element = e.target || e.srcElement;
+        if (element.id != 'lang-context-selector' && element.id != 'lang-context') {
+            lang_selector.addClass('hide');
+        }
+    });
+})();
+
+
+if ($('.side-nav').length) {
+    $('#logo').addClass('hidden-sm-down');
+    $('#js-toggle-side-nav').removeClass('hide');
+}
+$('#js-toggle-side-nav').on('click', function() {
+    $('.side-nav').addClass('side-nav-shown');
+    $('').modal({
+        overlayClose: true,
+        onClose: function() {
+            $('.side-nav').removeClass('side-nav-shown');
+            $.modal.close();
+        }});
+    $('#simplemodal-container').css({'display':'none'});
+    return false;
+});
+$('.js-close-side-nav').on('click', function() {
+    $('.side-nav').removeClass('side-nav-shown');
+    return false;
+});
+</script>
+
+</body>
+</html>
