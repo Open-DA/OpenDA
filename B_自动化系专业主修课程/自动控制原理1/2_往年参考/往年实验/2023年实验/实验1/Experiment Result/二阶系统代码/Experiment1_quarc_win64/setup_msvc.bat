@@ -1,0 +1,2 @@
+set "VSCMD_START_DIR=%CD%"
+"C:\vs2019\VC\Auxiliary\Build\VCVARSALL.BAT " AMD64
