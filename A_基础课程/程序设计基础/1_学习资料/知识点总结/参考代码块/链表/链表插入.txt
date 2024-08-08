@@ -1,0 +1,34 @@
+linklist InsertInfor(linklist L1,linklist L2)//把链表二插入到链表一某个节点之后
+{
+	int n,i=0,k=0;
+	linklist L,p,q,s,u;
+	scanf("%d",&n);
+	p=L1->next;
+	while(p!=NULL)
+	{
+		k++;
+		p=p->next;
+	}
+	while(n<0||n>k)
+	{
+		printf("Out of valid range, please input again:");
+		scanf("%d",&n);
+	}
+	s=L2;u=L2->next;
+	while(u!=NULL)
+	{
+		s=s->next;
+		u=u->next;
+	}
+	p=L1->next;
+	while(n>1)
+	{
+		p=p->next;
+		n--;
+	}
+	s->next=p->next;
+	p->next=L2->next;
+	free(L2);
+	L=L1;
+	return L;
+}

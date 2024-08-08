@@ -1,0 +1,31 @@
+void SortInfor(linklist L)
+{
+	linklist p,q,m=L->next;
+	int k=0,i,j;
+	
+	while(m!=NULL)
+	{
+		k++;
+		m=m->next;
+	}
+	for(i=0;i<k;i++)
+	{
+		p=L;
+	    q=L->next;
+		for(j=0;j<k-1;j++)
+		{
+			if(strcmp(q->number,q->next->number)>0)
+			{
+				p->next=q->next;
+				q->next=q->next->next;
+				p->next->next=q;
+				p=p->next;
+			}
+			else
+			{
+				p=p->next;
+				q=q->next;
+			}
+		}
+	}
+}

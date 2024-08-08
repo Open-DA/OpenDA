@@ -1,0 +1,11 @@
+void MyFree(linklist L)
+{
+	linklist p=L,q;
+	while(p!=NULL)
+	{
+		q=p->next;
+		free(p);
+		p=q;
+
+	}
+}

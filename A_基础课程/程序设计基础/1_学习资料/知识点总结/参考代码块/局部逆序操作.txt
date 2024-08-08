@@ -1,0 +1,14 @@
+void KReverse(char*str3,int k)//思想就是逆着考出来在正着粘回去。
+{
+	char str[200];
+	int m=strlen(str3)/k,i;
+	while(m>0)
+	{
+		for(i=0;i<k;i++)
+			str[i]=str3[(strlen(str3)/k-m+1)*k-1-i];
+		for(i=0;i<k;i++)
+			str3[(strlen(str3)/k-m)*k+i]=str[i];
+		m--;
+	}
+
+}

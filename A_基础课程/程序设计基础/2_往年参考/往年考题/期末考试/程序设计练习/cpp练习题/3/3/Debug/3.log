@@ -1,0 +1,31 @@
+﻿生成启动时间为 2021/1/4 17:58:18。
+     1>项目“D:\彭程\cpp练习题\3\3\3.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt 3.cpp
+         3.cpp
+     1>d:\彭程\cpp练习题\3\3\3.cpp(21): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>d:\彭程\cpp练习题\3\3\3.cpp(23): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>d:\彭程\cpp练习题\3\3\3.cpp(25): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>d:\彭程\cpp练习题\3\3\3.cpp(26): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(115) : 参见“strcat”的声明
+     1>d:\彭程\cpp练习题\3\3\3.cpp(32): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\彭程\cpp练习题\3\3\3.cpp(36): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\彭程\cpp练习题\3\3\3.cpp(31): warning C4101: “j”: 未引用的局部变量
+     1>d:\彭程\cpp练习题\3\3\3.cpp(46): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\彭程\cpp练习题\3\3\3.cpp(47): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\彭程\cpp练习题\3\3\3.cpp(44): warning C4101: “k”: 未引用的局部变量
+     1>d:\彭程\cpp练习题\3\3\3.cpp(73): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(261) : 参见“gets”的声明
+     1>d:\彭程\cpp练习题\3\3\3.cpp(74): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(261) : 参见“gets”的声明
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\彭程\cpp练习题\3\Debug\3.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\彭程\cpp练习题\3\Debug\3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\彭程\cpp练习题\3\Debug\3.lib" /MACHINE:X86 Debug\3.obj
+         3.vcxproj -> D:\彭程\cpp练习题\3\Debug\3.exe
+     1>已完成生成项目“D:\彭程\cpp练习题\3\3\3.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.77

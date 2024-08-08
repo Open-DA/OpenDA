@@ -1,0 +1,13 @@
+//将字符串2插入字符串1的第g项之后
+char* Combine(char*str1,char*str2,int g)
+{
+	char*str3;
+	int i;
+	str3=(char*)malloc(sizeof(char)*(strlen(str2)+strlen(str1)+1));
+	strncpy(str3,str1,g+1);
+	str3[g+1]=0;
+	strcat(str3,str2);
+	for(i=0;i<(strlen(str1)-g);i++)
+		str3[g+strlen(str2)+1+i]=str1[g+i+1];
+	return str3;
+}
