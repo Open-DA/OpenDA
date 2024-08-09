@@ -5,7 +5,8 @@
 项目主页以及文档[在此](https://open-da.github.io/OpenDA-Wiki/)，受[清华大学计算机系相关项目](https://github.com/PKUanonym/REKCARC-TSC-UHT)启发，创立了本项目。
 
 本项目继承了清华云盘版的“DA课程攻略共享”，该项目受到很多同学的使用和好评，但是由于清华云盘的有效期和不便维护等原因（目前云盘已失效），遂将本项目迁移到 Github并进行了大量的更新，在学习资料的基础上进一步建立了文档和讨论区，便于同学们使用和交流。
-![DA课程攻略共享的墓碑](cloud.png)
+
+<p align=“center”> <img src="cloud.png" width="500"/> </p>
 
 如果您觉得该项目对您在DA的学习发展有帮助，不妨点点Star并推荐给您身边的同学！
 
