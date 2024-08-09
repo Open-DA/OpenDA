@@ -1,19 +1,19 @@
 # 清华大学自动化系课程攻略共享计划
 
-[项目主页](https://open-da.github.io/OpenDA-Wiki/)
-
 ## 1. 项目介绍
 
-受[清华大学计算机系相关项目](https://github.com/PKUanonym/REKCARC-TSC-UHT)启发，创立了本项目。
+项目主页以及文档[在此](https://open-da.github.io/OpenDA-Wiki/)，受[清华大学计算机系相关项目](https://github.com/PKUanonym/REKCARC-TSC-UHT)启发，创立了本项目。
 
-本项目主要收集了我们几位同学在学习专业课程过程中的资料与笔记，针对每门课程应该如何学习也提供了我们自己的经验，以供大家参考。
+本项目继承了清华云盘版的“DA课程攻略共享”，该项目受到很多同学的使用和好评，但是由于清华云盘的有效期和不便维护等原因（目前云盘已失效），遂将本项目迁移到 Github并进行了大量的更新，在学习资料的基础上进一步建立了文档和讨论区，便于同学们使用和交流。
+![DA课程攻略共享的墓碑](cloud.png)
 
+如果您觉得该项目对您在DA的学习发展有帮助，不妨点点Star并推荐给您身边的同学！
 
 ## 2. 如何下载
 
-如果你是清华大学学生，可以使用Tsinghua Git 直接 `git clone`下载；
+如果想使用 Github 进行资料下载，网络条件好的同学可以直接 `git clone`下载；网络条件有限可以使用[DownGit网站](https://tool.mkblog.cn/downgit/#/home)下载，只需将Github上的文件夹链接复制到DownGit中即可。使用 `DownGit` 网站的优势是可以只下载某个文件夹，而不必把整个项目完全下载到本地。当然为了方便大家使用，项目组已将DownGit的下载外链放在了每个课程的文档中，可以直接点击下载。
 
-如果想使用 Github 进行资料下载，网络条件好的同学可以直接 `git clone`下载；网络条件不好的同学可以想办法把网络条件变好，或者可以使用[DownGit网站](https://tool.mkblog.cn/downgit/#/home)下载，只需将Github上的文件夹链接复制到DownGit中即可。此外，使用 `DownGit` 网站的另一个优势是可以只下载某个文件夹，而不必把整个项目完全下载到本地。
+如果你是清华大学学生，可以使用Tsinghua Git 直接 `git clone`下载。
 
 ## 3. 如何贡献
 
@@ -41,16 +41,19 @@
 
 ## 致谢
 
-感谢参与到本项目的贡献者：[希文](https://gao-jiawei.com/), [pengc02](https://pengc02.github.io/)。
+感谢参与到本项目的贡献者：[希文](https://gao-jiawei.com/), [pengc02](https://github.com/pengc02),[bluecat](https://bluecat-de.github.io/)...或许还有屏幕前的DAers。
 
-感谢以下项目为我们提供了参考和灵感。
+感谢以下项目为我们提供了参考和灵感，也欢迎大家前往学习：
 
 - [清华大学计算机系课程攻略](https://github.com/PKUanonym/REKCARC-TSC-UHT)
 - [浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles)
 - [哈工大（深圳）自动化课程攻略共享计划](https://github.com/HITSZ-OpenAuto)
 - [清华大学软件学院互助文档](https://ssast-readme.github.io/)
 - [“你校”课程点评](https://yourschool.cc/thucourse/courses)
+- [“你校”新生手册](https://yourschool.cc/thubook/)
 - [北大CS自学指南](https://csdiy.wiki/)
+- [自动化系毕业生手册](https://dagrad.site/)
+
 
 ## 5. 须知
 
