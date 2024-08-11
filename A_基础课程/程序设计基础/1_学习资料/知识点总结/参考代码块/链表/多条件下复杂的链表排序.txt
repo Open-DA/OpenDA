@@ -1,0 +1,71 @@
+void MySort(linklist L)
+{
+	int i,j,k=0;
+	linklist s=L->next,p,q,temp;
+	while(s!=NULL)
+	{
+		k++;
+		s=s->next;
+	}
+	p=L->next;
+	q=p->next;
+	for(i=0;i<k;i++)
+	{
+		s=L;
+		p=L->next;//注意这两步一定要在循环里面写。
+	                q=p->next;
+		for(j=0;j<k-1;j++)
+		{
+			if(p->cla>q->cla)
+			{
+				s->next=q;
+				p->next=q->next;
+				q->next=p;
+				s=s->next;
+				q=p->next;
+			}
+			else if(p->cla<q->cla)
+			{
+				s=s->next;
+				p=p->next;
+				q=q->next;
+
+			}
+			else if(p->cla==q->cla)
+			{
+				if(p->h>q->h)
+				{
+				s->next=q;
+				p->next=q->next;
+				q->next=p;
+				s=s->next;
+				q=p->next;
+				}
+				else if(p->h<q->h)
+			              {
+				s=s->next;
+				p=p->next;
+				q=q->next;
+			               }
+				else if(p->h==q->h)
+				{
+				    if(strcmp(p->num,q->num)>0)
+				      {
+				        s->next=q;
+				        p->next=q->next;
+				        q->next=p;
+				        s=s->next;
+				        q=p->next;
+				       }
+				     else if(strcmp(p->num,q->num)<0)
+	                     {
+				          s=s->next;
+				          p=p->next;
+				          q=q->next;
+			             }
+				}
+			}
+		}
+	}
+
+}

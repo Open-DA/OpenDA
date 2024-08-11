@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}实验名称}{2}{}%
+\contentsline {section}{\numberline {2}实验目的}{2}{}%
+\contentsline {section}{\numberline {3}实验原理}{2}{}%
+\contentsline {subsection}{\numberline {3.1}热传导}{2}{}%
+\contentsline {subsection}{\numberline {3.2}一阶导热模型}{2}{}%
+\contentsline {subsection}{\numberline {3.3}热传导方程及解}{2}{}%
+\contentsline {subsection}{\numberline {3.4}表面热流密度$q_c$的计算和温度差的测量}{3}{}%
+\contentsline {section}{\numberline {4}实验仪器}{3}{}%
+\contentsline {section}{\numberline {5}实验任务}{3}{}%
+\contentsline {subsection}{\numberline {5.1}实验步骤}{3}{}%
+\contentsline {section}{\numberline {6}数据处理}{4}{}%
+\contentsline {subsection}{\numberline {6.1}万用表的使用练习}{4}{}%
+\contentsline {subsection}{\numberline {6.2}热导实验准备、器件检查}{4}{}%
+\contentsline {subsection}{\numberline {6.3}温差电动势测量数据}{5}{}%
+\contentsline {section}{\numberline {7}实验总结}{7}{}%
+\contentsline {section}{\numberline {8}原始实验数据}{8}{}%

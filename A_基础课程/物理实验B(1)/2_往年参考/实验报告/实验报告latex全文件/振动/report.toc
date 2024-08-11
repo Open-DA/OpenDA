@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}实验名称}{2}{}%
+\contentsline {section}{\numberline {2}实验目的}{2}{}%
+\contentsline {section}{\numberline {3}实验原理}{2}{}%
+\contentsline {subsection}{\numberline {3.1}阻尼振动运动方程}{2}{}%
+\contentsline {subsection}{\numberline {3.2}电机运动时的受迫振动运动方程}{2}{}%
+\contentsline {section}{\numberline {4}实验仪器}{3}{}%
+\contentsline {section}{\numberline {5}实验任务}{3}{}%
+\contentsline {subsection}{\numberline {5.1}实验步骤}{3}{}%
+\contentsline {subsection}{\numberline {5.2}注意事项}{3}{}%
+\contentsline {section}{\numberline {6}数据处理}{4}{}%
+\contentsline {subsection}{\numberline {6.1}测量最小阻尼时的阻尼比 $\zeta $ 和固有角频率 $\omega _{0}$}{4}{}%
+\contentsline {subsubsection}{\numberline {6.1.1}阻尼比 $ \zeta $ 的计算}{4}{}%
+\contentsline {subsubsection}{\numberline {6.1.2}周期计算}{5}{}%
+\contentsline {subsubsection}{\numberline {6.1.3}固有角频率计算}{6}{}%
+\contentsline {subsection}{\numberline {6.2}测量其余三种阻尼档位的阻尼比和固有角频率}{6}{}%
+\contentsline {subsubsection}{\numberline {6.2.1}阻尼档2}{6}{}%
+\contentsline {subsubsection}{\numberline {6.2.2}阻尼档3}{8}{}%
+\contentsline {subsubsection}{\numberline {6.2.3}阻尼档4}{9}{}%
+\contentsline {subsubsection}{\numberline {6.2.4}参数汇总}{11}{}%
+\contentsline {subsection}{\numberline {6.3}测定受迫振动的幅频特性和相频特性曲线}{11}{}%
+\contentsline {section}{\numberline {7}实验小结}{14}{}%
+\contentsline {subsection}{\numberline {7.1}思考题}{14}{}%
+\contentsline {subsection}{\numberline {7.2}总结}{15}{}%
+\contentsline {section}{\numberline {8}预习思考题}{16}{}%
+\contentsline {section}{\numberline {9}原始数据记录}{17}{}%

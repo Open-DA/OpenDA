@@ -1,0 +1,216 @@
+\documentclass[a4paper,11pt,UTF8]{ctexart}
+
+\usepackage{indentfirst} %缩进
+\usepackage{xeCJK}    %使用系统字体
+\usepackage{bm}       %粗体
+\usepackage{fancyhdr} %自定义页眉页脚
+\pagestyle{empty}                   %不设置页眉页脚
+\usepackage{amsmath, amsthm, amssymb, amsfonts} %数学公式
+\usepackage[a4paper,left=3cm,right=3cm,top=3.5cm,bottom=3.5cm]{geometry}
+\usepackage{booktabs} %插入表格
+\usepackage[section]{placeins} %避免浮动
+\usepackage{listings} %插入代码
+\usepackage{ctex}     %中文宏包
+\usepackage[svgnames, table]{xcolor} %彩色表格
+\usepackage{algorithm}          %伪代码
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{algorithm,algpseudocode,float}
+\usepackage{lipsum}
+\usepackage{enumitem}           %调整列举环境
+\usepackage{url}
+\usepackage{fontspec,xunicode}
+\defaultfontfeatures{Mapping=tex-text} %如果没有它，会有一些 tex 特殊字符无法正常使用，比如连字符。
+\usepackage{multirow} 
+\usepackage{graphicx}
+\graphicspath{{imgs/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 缩进及行间距
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{22bp} %重新定义缩进长度
+\linespread{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 图的标题行间距设置
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\bottomcaption}{%
+\setlength{\abovecaptionskip}{6bp}%
+\setlength{\belowcaptionskip}{6bp}%
+\caption}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 字体定义
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setmainfont{Times New Roman}  %默认英文字体.serif是有衬线字体sans serif无衬线字体
+\setmonofont{Consolas}
+\setCJKmainfont[ItalicFont={楷体}, BoldFont={黑体}]{宋体}%衬线字体 缺省中文字体为
+\setCJKsansfont{宋体}
+\punctstyle{hangmobanjiao}
+%-----------------------xeCJK下设置中文字体------------------------------%
+\setCJKfamilyfont{song}{SimSun}                             %宋体 song
+\newcommand{\song}{\CJKfamily{song}}
+\setCJKfamilyfont{fs}{FangSong}                      %仿宋  fs
+\newcommand{\fs}{\CJKfamily{fs}} 
+\let\kaishu\relax                                    %重定义楷体，打开假粗体
+\newCJKfontfamily\kaishu{KaiTi}[AutoFakeBold] 
+%\setCJKfamilyfont{ktgb}{KaiTi_GB2312}                      %楷体 GB2312
+%\newcommand{\ktgb}{\CJKfamily{ktgb}}
+\setCJKfamilyfont{yh}{Microsoft YaHei}                    %微软雅黑 yh
+\newcommand{\yh}{\CJKfamily{yh}}
+\setCJKfamilyfont{hei}{SimHei}                              %黑体  hei
+\newcommand{\hei}{\CJKfamily{hei}}
+%------------------------------设置字体大小------------------------%
+\newcommand{\chuhao}{\fontsize{42bp}{63bp}\selectfont}     %初号， 1.5倍行距
+\newcommand{\xiaochuhao}{\fontsize{36bp}{36bp}\selectfont} %小初号，单倍行距
+\newcommand{\yihao}{\fontsize{26bp}{39bp}\selectfont}        % 一号, 1.5 倍行距
+\newcommand{\erhao}{\fontsize{22bp}{33bp}\selectfont}        % 二号, 1.5倍行距
+\newcommand{\xiaoerhao}{\fontsize{18bp}{18bp}\selectfont}       % 小二, 单倍行距
+\newcommand{\sanhao}{\fontsize{16bp}{24bp}\selectfont}       % 三号, 1.5倍行距
+\newcommand{\xiaosanhao}{\fontsize{15bp}{22bp}\selectfont}      % 小三, 1.5倍行距
+\newcommand{\sihao}{\fontsize{14bp}{21bp}\selectfont}        % 四号, 1.5 倍行距
+\newcommand{\banxiaosi}{\fontsize{13bp}{20bp}\selectfont}  % 半小四, 20pt行距
+\newcommand{\xiaosihao}{\fontsize{12bp}{20bp}\selectfont}       % 小四, 20pt行距
+\newcommand{\dawuhao}{\fontsize{11bp}{11bp}\selectfont}      % 大五号, 单倍行距
+\newcommand{\wuhao}{\fontsize{10.5bp}{10.5bp}\selectfont}   % 五号, 单倍行距
+\newcommand{\xiaowuhao}{\fontsize{9bp}{9bp}\selectfont}   %小五号，单倍行距
+%------------------------------重定义normalize------------------------%
+\renewcommand{\normalsize}{\fontsize{12bp}{20bp}\selectfont}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 图题字体大小相同
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{caption}
+\captionsetup{font={footnotesize}}   % footnotesize = 9bp
+\captionsetup[lstlisting]{font={footnotesize}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 重定义section标题
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CTEXsetup[format={\CJKfamily{zhhei}\zihao{4}},number={\chinese{section}},name={,、~},aftername={},indent={0bp},beforeskip={6bp},afterskip={6bp},format+={\flushleft}]{section}
+\CTEXsetup[format={\Large\bfseries\CJKfamily{zhkai}\zihao{5}},name={（,）},number={\chinese{subsection}},aftername={},indent={22bp},beforeskip={6bp},afterskip={6bp}]{subsection}
+\CTEXsetup[number={\chinese{section}},name={附录, ~~ }]{appendix}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 标题名称中文化
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\figurename{\hei 图}
+\renewcommand\tablename{\hei 表}
+\renewcommand\lstlistingname{\hei 代码}
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
+\renewcommand{\algorithmicensure}{\textbf{输出:}}
+\newtheorem{define}{定义}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 代码设置
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstset{
+ columns=fixed,
+ numbers=left,                                        % 在左侧显示行号
+ numberstyle=\tiny\color{gray},                       % 设定行号格式
+ frame=single,                                        % 单线背景边框
+ breaklines=true,                                     % 设定LaTeX对过长的代码行进行自动换行
+ keywordstyle=\color[RGB]{40,40,255},                 % 设定关键字颜色
+ numberstyle=\footnotesize\color{darkgray},
+ commentstyle=\it\color[RGB]{0,96,96},                % 设置代码注释的格式
+ stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},   % 设置字符串格式
+ showstringspaces=false,                              % 不显示字符串中的空格
+ language=java,                                        % 设置语言
+ basicstyle=\linespread{1.0}\xiaowuhao\ttfamily,                      % 字体字号
+ %lineskip=10bp,
+ %baselinestretch=1,
+}
+
+
+
+
+\begin{document}
+\xiaosihao\song
+
+\begin{titlepage}
+\center{\yihao{清华大学大学物理实验}}\\
+\vspace{6cm}
+\center{\xiaochuhao{\kaishu{\bfseries 实~验~报~告}}}
+\vspace{4cm}
+
+\begin{center}
+\begin{large}
+\begin{tabular}{rc}
+\xiaoerhao{\hei{学\qquad 号}}& \hspace{1.7cm}\xiaoerhao{\hei{2020011073\hspace{1.7cm}}} \\
+\cline{2-2}\\
+\xiaoerhao{\hei{姓\qquad 名}}& \xiaoerhao{\hei{高~嘉~伟}}\\
+\cline{2-2}\\
+\xiaoerhao{\hei{实验名称}}& \xiaoerhao{\hei{}}\\
+\cline{2-2}\\
+\end{tabular}
+\end{large}
+\end{center}
+\vfill \hfill
+\end{titlepage}
+\clearpage
+
+\tableofcontents
+
+\clearpage
+
+\centerline{\\[10bp]\erhao{\fs{大~学~物~理~实~验}}}
+
+\centerline{\\[20bp]\yihao{\fs{实  ~~~~ 验  ~~~~ 报  ~~~~ 告}}}
+
+\leftline{\\[10bp]\sihao{\hei{\hspace{1.5em} 学生姓名：高嘉伟 \hfill 学号：2020011073 \hfill 指导教师：= }}}
+
+\leftline{\\[10bp]\sihao{\hei{\hspace{1.5em} 实验地点：6A501 \hfill }}}
+
+\leftline{\\[10bp]\sihao{\hei{\hspace{1.5em} 实验时间：2021年10月11日 \hfill }}}
+
+
+\setlength{\parskip}{20bp}  %定义段间距
+
+
+\section{实验名称}
+\section{实验原理}
+简明扼要  
+
+
+\section{实验仪器}
+名称、规格、编号（或实验台号）  
+
+
+\section{实验任务}
+列出关键事项，简单明了  
+
+完整报告中 1-4 项不超过 1000 字，不要抄讲义，要自己提炼总结。 
+\section{数据处理}
+
+包括实验数据整理、数据处理过程（计算、作图、不确定度分析等）、实验结果  
+\section{实验总结}
+据实分析，不写虚
+
+
+
+
+
+\section{思考题:}
+
+
+\section{原始数据}
+报告末尾附上有教师签字的原始数据记录。  
+
+\vspace{4cm}
+\begin{flushright}
+\begin{tabular}{lc}
+\sihao{\hei{报告评分：}}& \sihao{\hei{X~X~X}}\\
+\sihao{\hei{指导教师签字：}}& \sihao{\hei{X~X~X}}\\
+\end{tabular}
+\end{flushright}
+
+
+\end{document}

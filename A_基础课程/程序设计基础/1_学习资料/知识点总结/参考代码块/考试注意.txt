@@ -1,0 +1,17 @@
+开机
+拷贝资料
+打开多个c文件
+头都写好
+窗口调成150
+
+c
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+#include<stdlib.h>
+
+
+cpp
+#include<iostream>
+#include<string.h>
+#include<>

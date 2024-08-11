@@ -1,0 +1,18 @@
+int ***InputMatrix(int*m,int*n,int*p)//创建和赋值0
+{
+	int ***A,i,j,k;
+	scanf("%d%d%d",m,n,p);
+	A=(int***)malloc(sizeof(int**)*(*m));
+	for(i=0;i<*m;i++)
+	{
+		*(A+i)=(int**)malloc(sizeof(int*)**n);
+	}
+	for(i=0;i<*m;i++)
+		for(j=0;j<*n;j++)
+			*(*(A+i)+j)=(int*)malloc(sizeof(int)**p);
+	for(i=0;i<*m;i++)
+		for(j=0;j<*n;j++)
+			for(k=0;k<*p;k++)
+				A[i][j][k]=0;
+	return A;
+}

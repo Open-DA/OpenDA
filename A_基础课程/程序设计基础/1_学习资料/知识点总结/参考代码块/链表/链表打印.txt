@@ -1,0 +1,9 @@
+void PrintInfo(linklist L)
+{
+	linklist p=L->next;
+	while(p!=NULL)
+	{
+		printf("%s %s %s\n",p->number,p->name,p->sequence);
+		p=p->next;
+	}
+}

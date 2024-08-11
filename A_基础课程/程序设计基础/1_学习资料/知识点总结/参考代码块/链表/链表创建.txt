@@ -1,0 +1,19 @@
+linklist Create()
+{
+	linklist L,p,q;
+	char num[5];
+	p=L=(linklist)malloc(sizeof(listnode));
+	scanf("%s",num);
+	while(strcmp(num,"STOP")!=0)
+	{
+		q=(linklist)malloc(sizeof(listnode));
+		strcpy(q->number,num);
+		scanf("%s",q->name);
+		scanf("%s",q->sequence);
+		p->next=q;
+		p=q;
+		scanf("%s",num);
+	}
+	p->next=NULL;
+	return L;
+}

@@ -1,0 +1,157 @@
+%!TEX program = pdflatex
+% Full chain: pdflatex -> biber/bibtex -> pdflatex -> pdflatex
+\documentclass[11pt,en]{elegantpaper}
+
+\title{ElegantPaper: An Elegant \LaTeX{} Template for Working Papers}
+\author{Ethan DENG \\ Fudan University \and Dongsheng DENG \\ PA Technology}
+\institute{\href{https://github.com/ElegantLaTeX}{Elegant\LaTeX{} Program}}
+
+\version{0.10}
+\date{\today}
+
+% cmd for this doc
+\usepackage{array}
+\newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
+
+\addbibresource[location=local]{reference.bib} % reference file
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This documentation illustrates the usage of the \href{https://github.com/ElegantLaTeX/ElegantPaper}{ElegantPaper} template. This template is based on the standard \LaTeX{} article class, which is designed for working paper writing. With this template, you can get rid of all the worries about the format and merely focus on writing. For any question, please leave a message on \href{https://github.com/ElegantLaTeX/ElegantPaper/issues}{GitHub::ElegantPaper/issues}. Want to know more about Elegant\LaTeX{} Templates? Please visit: \href{https://github.com/ElegantLaTeX}{https://github.com/ElegantLaTeX}.\par
+\keywords{Elegant\LaTeX{}, Working Paper, Template}
+\end{abstract}
+
+
+\section*{Update Notes}
+
+This version changes two important parts: fonts and bibliography.
+
+\textbf{Fonts}: Due to the newtx package updates, we change the font settings for all the templates of ElegantLaTeX. Under \hologo{XeLaTeX}, we use \lstinline{fontspec} package  to set the font to TeX Gyre Terms/Heros. 
+
+\textbf{Bibliography}: The bib file is no longer \lstinline{wpref.bib}, it's same with ElegantBook bibfile, \lstinline{reference.bib}. Besides, we use biblatex/biber rather than bibtex to handler bibliography, you can use bibstyle and citestyle to set the styles. For convenience, we offer a \lstinline{bibend} option, which can take values of \lstinline{biber} (default) and \lstinline{bibtex}, please refer to Bibliography section and biblatex package document for more information.
+
+\section{Introduction}
+
+This template is based on the standard \LaTeX{} article class, hence the arguments of article class are acceptable (\lstinline{a4paper}, \lstinline{10pt} and etc.). Alternative engines are \hologo{pdfLaTeX} and \hologo{XeLaTeX}.
+
+\begin{lstlisting}
+\documentclass[a4paper,11pt]{elegantpaper}
+\end{lstlisting}
+\textbf{Note:} ElegantPaper is available on  \href{https://www.overleaf.com/latex/templates/elegantpaper-template/yzghrqjhmmmr}{Overleaf} and \href{https://gitee.com/ElegantLaTeX/ElegantPaper}{gitee}.
+
+\subsection{Global Options}
+Language mode option \lstinline{lang} allows two alternative inputs, \lstinline{lang=en} (default)  for English or \lstinline{lang=cn} for Chinese. \lstinline{lang=cn} will make the caption of figure/table, abstract name, refname etc. Chinese. You can use this option as
+\begin{lstlisting}
+\documentclass[lang=cn]{elegantpaper} % or
+\documentclass[cn]{elegantpaper} 
+\end{lstlisting}
+\textbf{Note:} Under the English mode \lstinline{lang=en}, Chinese characters are not allowed. To type in Chinese, please load  \lstinline{ctex} or \lstinline{xeCJK} package at the preamble as:
+\begin{lstlisting}
+\usepackage[UTF8,scheme=plain]{ctex}
+\end{lstlisting}
+
+\subsection{Math Fonts}
+
+This template defines a new option (\lstinline{math}), with three options:
+
+\begin{enumerate}
+  \item \lstinline{math=cm} (default), use \LaTeX{} default math font (recommended).
+  \item \lstinline{math=newtx}, use \lstinline{newtxmath} math font (may bring about bugs).
+  \item \lstinline{math=mtpro2}, use \lstinline{mtpro2} package to set math font.
+\end{enumerate}
+
+
+\subsection{Custom Commands}
+Default \LaTeX{} commands and environments are all the same in this template\footnote{To ensure the codes are replicatable. We recommend users pay more attention to the contents other than formats. This is the meaning of the existence of the template.}. We created four new commands:
+\begin{enumerate}
+  \item \lstinline{\email}: create the hyperlink to email address.
+  \item \lstinline{\figref}: same usage as \lstinline{\ref}, but start with label text \textbf{Figure n}.
+  \item \lstinline{\tabref}: same usage as \lstinline{\ref}, but start with label text \textbf{Table n}.
+  \item \lstinline{\keywords}: create the keywords in the abstract section.
+\end{enumerate}
+
+
+\subsection{Bibliography}
+
+This template uses biblatex to generate the bibliography, the default citestyle and bibliography style are both \lstinline{numeric}. Let's take a glance at the citation effect. ~\cite{en1} use data from a major peer-to-peer lending \cite{en3} marketplace in China to study whether female and male investors evaluate loan performance differently \parencite{en2}. 
+
+If you want to use biblatex, you must create a file named \lstinline{reference.bib}, add bib items (from Google Scholar, Mendeley, EndNote, and etc.) to \lstinline{reference.bib} file, then cite the bibkey in the \lstinline{tex} file. The biber will automatically generate the bibliography for the reference you cited.
+
+
+To change the bibliography style, this version introduces two options: \lstinline{citestyle} and \lstinline{bibstyle}, please refer to \href{https://ctan.org/pkg/biblatex}{CTAN:biblatex} for more detail about these options. You can change your bibliography style as
+
+\begin{lstlisting}
+\documentclass[citestyle=numeric-comp, bibstyle=authoryear]{elegantpaper} 
+\end{lstlisting}
+
+We also add the \lstinline{bibend} option to this template, you can choose \lstinline{biber} (default) or \lstinline{bibtex} as you like, \lstinline{biber} is recommended.
+
+\begin{lstlisting}
+\documentclass[bibtex]{elegantpaper} % or
+\documentclass[bibend=bibtex]{elegantpaper}
+\end{lstlisting}
+
+
+
+\subsection{Use newtx fonts}
+If you use \lstinline{newtx} fonts, you can use the \lstinline{math} option as 
+\begin{lstlisting}
+\documentclass[math=newtx]{elegantpaper}
+\end{lstlisting}
+
+
+\subsubsection{Hyphens}
+Since the template uses \lstinline{newtx}, please pay attention to the hyphens. For instance,
+\begin{equation}
+\int_{R^q} f(x,y) dy.\emph{of\kern0pt f}
+\end{equation}
+
+The corresponding code is: 
+\begin{lstlisting}
+\begin{equation}
+\int_{R^q} f(x,y) dy.\emph{of \kern0pt f}
+\end{equation}
+\end{lstlisting}
+
+\subsubsection{Symbol Fonts}
+Feedback from ElegantBook users claims that error occurs when using our templates with  \lstinline{yhmath}, \lstinline{esvect} and other packages.
+\begin{lstlisting}
+LaTeX Error:
+Too many symbol fonts declared.
+\end{lstlisting}
+
+The reason is that the template redefines font for math so that no new math font is allowed to be added. To use \lstinline{yhmath} and/or \lstinline{esvect}, please locate \lstinline{yhmath} or \lstinline{esvect} in \lstinline{elegantpaper.cls}, uncomment corresponding related code.
+
+
+\section{FAQ}
+
+\begin{enumerate}[label=\arabic*).]
+  \item \textit{How to remove the information of version?}\\
+  Please comment \lstinline|\version{x.xx}|.
+  \item \textit{How to remove the information of date?}\\
+  Please type in \lstinline|\date{}|.
+  \item \textit{How to add several authors?}\\
+  Use \lstinline{\and} in \lstinline{\author} and use \lstinline{\\} to start a new line.
+  \begin{lstlisting}
+  \author{author 1\\ org. 1 \and author 2 \\ org. 2 }
+  \end{lstlisting}
+  \item \textit{How to display bilingual abstracts?}\\
+  Please refer to \href{https://github.com/ElegantLaTeX/ElegantPaper/issues/5}{GitHub::ElegantPaper/issues/5}
+\end{enumerate}
+
+\section{Acknowledgement}
+
+Thank \href{https://github.com/sikouhjw}{sikouhjw} and \href{https://github.com/syvshc}{syvshc} for their quick response to Github issues and continuously support work for ElegantLaTeX. Thank ChinaTeX and \href{http://www.latexstudio.net/}{LaTeX Studio} for their promotion. 
+
+
+
+\printbibliography[heading=bibintoc, title=\ebibname]
+
+\appendix
+%\appendixpage
+\addappheadtotoc
+
+
+\end{document}
