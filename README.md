@@ -14,7 +14,7 @@
 
 如果想使用 Github 进行资料下载，网络条件好的同学可以直接 `git clone`下载；网络条件有限可以使用[DownGit网站](https://tool.mkblog.cn/downgit/#/home)下载，只需将Github上的文件夹链接复制到DownGit中即可。使用 `DownGit` 网站的优势是可以只下载某个文件夹，而不必把整个项目完全下载到本地。当然为了方便大家使用，项目组已将DownGit的下载外链放在了每个课程的文档中，可以直接点击下载。
 
-如果你是清华大学学生，可以使用Tsinghua Git 直接 `git clone`下载。
+如果你是清华大学学生，可以使用[Tsinghua Git](https://git.tsinghua.edu.cn/openda/openda.git) 直接 `git clone`下载。
 
 ## 3. 如何贡献
 
