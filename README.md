@@ -1,5 +1,10 @@
 # 清华大学自动化系课程攻略共享计划
 
+## NEWS
+
+* 2024.08.14: 上传了[军事理论资料](https://github.com/Open-DA/OpenDA/tree/main/D_%E5%85%B6%E4%BB%96/%E5%86%9B%E4%BA%8B%E7%90%86%E8%AE%BA%E8%AF%BE)和[自动化系推研资料](https://github.com/Open-DA/OpenDA/tree/main/D_%E5%85%B6%E4%BB%96/%E8%87%AA%E5%8A%A8%E5%8C%96%E7%B3%BB%E6%8E%A8%E7%A0%94%E8%B5%84%E6%96%99)!
+* 2024.08.11: 项目正式上线，欢迎大家使用！
+
 ## 1. 项目介绍
 
 项目主页以及文档[在此](https://open-da.github.io/OpenDA-Wiki/)，受[清华大学计算机系相关项目](https://github.com/PKUanonym/REKCARC-TSC-UHT)启发，创立了本项目。
