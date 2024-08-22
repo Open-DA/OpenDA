@@ -2,7 +2,6 @@
 
 ## NEWS
 
-* 2024.08.14: 上传了[军事理论资料](https://github.com/Open-DA/OpenDA/tree/main/D_%E5%85%B6%E4%BB%96/%E5%86%9B%E4%BA%8B%E7%90%86%E8%AE%BA%E8%AF%BE)和[自动化系推研资料](https://github.com/Open-DA/OpenDA/tree/main/D_%E5%85%B6%E4%BB%96/%E8%87%AA%E5%8A%A8%E5%8C%96%E7%B3%BB%E6%8E%A8%E7%A0%94%E8%B5%84%E6%96%99)!
 * 2024.08.11: 项目正式上线，欢迎大家使用！
 
 ## 1. 项目介绍
@@ -47,7 +46,7 @@
 
 ## 致谢
 
-感谢参与到本项目的贡献者：[希文](https://gao-jiawei.com/), [pengc02](https://github.com/pengc02),[bluecat](https://bluecat-de.github.io/)...或许还有屏幕前的DAers。
+感谢参与到本项目的贡献者：[希文](https://gao-jiawei.com/), [pengc02](https://github.com/pengc02), [bluecat](https://bluecat-de.github.io/), [shanyan20](https://github.com/shanyan20)...或许还有屏幕前的DAers。
 
 感谢以下项目为我们提供了参考和灵感，也欢迎大家前往学习：
 
